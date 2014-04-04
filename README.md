@@ -85,7 +85,7 @@ Example:
 
 ```html
 <h2>You can only put unicorns here</h2>
-<div ks-kraken="animal in zoo" ks-kraken-accepts="unicorns">
+<div ks-kraken="animal in zoo" ks-kraken-accept="unicorns">
   {{animal.name}}
 </div>
 <h2>This takes any animal</h2>
