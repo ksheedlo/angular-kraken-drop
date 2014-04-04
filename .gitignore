@@ -1,0 +1,6 @@
+node_modules/
+.sass-cache/
+demo/bower_components/
+demo/demo.css
+demo/kraken-drop.js
+

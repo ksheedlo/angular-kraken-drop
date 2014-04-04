@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="krakenDemo">
+  <head>
+    <title>angular-kraken-drop Demo</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/demo.css">
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/ui/jquery.ui.core.js"></script>
+    <script src="/bower_components/jquery-ui/ui/jquery.ui.widget.js"></script>
+    <script src="/bower_components/jquery-ui/ui/jquery.ui.mouse.js"></script>
+    <script src="/bower_components/jquery-ui/ui/jquery.ui.draggable.js"></script>
+    <script src="/bower_components/jquery-ui/ui/jquery.ui.droppable.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/kraken-drop.js"></script>
+    <script src="/kraken-demo.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div ng-controller="KrakenCtrl">
+        <div class="row">
+          <h3>Music</h3>
+          <div ks-kraken="tag in tags" ks-kraken-duplicate ks-kraken-accept="falseFn"
+          class="col-sm-12 tag-section">
+            <div class="dragtag">
+              <span ng-bind="tag.tag"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row" ng-repeat="day in days" ng-init="outerIndex = $index">
+          <h4 ng-bind="day.day"></h4>
+          <div ks-kraken="tag in day.tags" ks-kraken-accept="noDupes(outerIndex)"
+            ks-kraken-cancel=".cancel" class="col-sm-12 tag-section">
+            <div class="dragtag long">
+              <span ng-bind="tag.tag"></span>
+              <span class="cancel" ng-click="deleteTag(outerIndex,tag.tag)">&times;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

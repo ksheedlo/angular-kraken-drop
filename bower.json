@@ -1,0 +1,26 @@
+{
+  "name": "angular-kraken-drop",
+  "version": "0.1.0",
+  "authors": [
+    "Ken Sheedlo <ovrkenthousand@gmail.com>"
+  ],
+  "description": "AngularJS drag-n-drop wrapper for jQuery UI draggable and droppable",
+  "main": "src/kraken-drop.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "demo/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "jquery-ui": "~1.10.4",
+    "angular": "~1.2.16"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}

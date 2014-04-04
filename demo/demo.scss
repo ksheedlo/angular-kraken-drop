@@ -1,0 +1,35 @@
+.tag-section {
+  background-color: darken(#38B2CE, 10%);
+  min-height: 50px;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.dragtag {
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #E8E8E9;
+  background-color: darken(#04819E, 10%);
+  margin-bottom: 4px;
+  margin-right: 4px;
+  padding: 6px 12px;
+
+  .cancel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 32px;
+    padding-left: 6px;
+    font-size: 20px;
+    border-left: 1px solid #E8E8E9;
+  }
+  &.long {
+    padding-right: 37px;
+  }
+}
+
+body {
+  color: #E8E8E9;
+  background-color: darken(#04819E, 10%);
+}
