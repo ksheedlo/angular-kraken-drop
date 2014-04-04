@@ -136,7 +136,7 @@ The inverse of `ks-kraken-cancel`.
 </div>
 ```
 
-# FAQ
+## FAQ
 
 1. **Why would I want to use this?**
 
