@@ -74,7 +74,6 @@ angular.module('ks.kraken-drop', []).directive('ksKraken', ['$compile', function
         var options = normalizeOptions($scope, $attrs),
           accept,
           draggableConfig,
-          droppableConfig,
           oldScopes,
           reloadContents,
           instanceKey = krakenKey++;

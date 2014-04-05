@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
+  bytediff = require('gulp-bytediff'),
   concat = require('gulp-concat'),
   config = require('./bower.json'),
   header = require('gulp-header'),
@@ -30,15 +31,14 @@ gulp.task('scripts', function () {
     }))
     .pipe(footer("\n})(angular);"))
     .pipe(gulp.dest('./dist/'))
-    .pipe(gulp.dest('./demo/'))
+    .pipe(bytediff.start())
     .pipe(uglify({
-      report: 'min',
-      beautify: {
-        beautify: false,
+      output: {
         max_line_len: 500
       },
       preserveComments: 'some'
     }))
+    .pipe(bytediff.stop())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/'));
 });
@@ -56,4 +56,6 @@ gulp.task('jshint', function () {
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(jshint.reporter('fail'));
 });
+
+gulp.task('default', ['jshint', 'scripts']);
 
