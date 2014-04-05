@@ -49,6 +49,19 @@ It also works on objects:
 </div>
 ```
 
+When working with arrays, `ks-kraken` exposes an `$index` on the scope just like
+`ng-repeat`.
+
+```html
+<div ks-kraken="item in list">
+  {{$index}} - {{item.name}}
+</div>
+```
+
+If you use `ks-kraken` inside of a `ng-repeat`, you can use
+[ngInit](http://docs.angularjs.org/api/ng/directive/ngInit) to alias the `$index`
+from `ng-repeat`.
+
 ## Config
 
 angular-kraken-drop is designed to be easy to extend. At the moment, most of
